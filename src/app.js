@@ -35,6 +35,16 @@ window.onload = function() {
     return number[aleatoriosNumeros];
   }
 
+  function cardRed() {
+    let suitCard = document.querySelectorAll(".suit");
+    suitCard.forEach(element => {
+      if (element.innerHTML === "♦" || element.innerHTML === "♥") {
+        element.style.color = "red";
+      } else {
+        element.style.color = "";
+      }
+    });
+  }
   let resultSuit = aleatorioSuit();
 
   let suitCard = document.querySelectorAll(".suit");
@@ -46,6 +56,8 @@ window.onload = function() {
 
   let numberCard = document.querySelector(".number");
   numberCard.innerHTML = resultNumber;
+
+  let selectCardRed = cardRed();
   console.log(aleatorioSuit());
   console.log(aleatorioNumber());
   console.log("Hello Rigo from the console!");
