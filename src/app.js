@@ -58,6 +58,26 @@ window.onload = function() {
   numberCard.innerHTML = resultNumber;
 
   let selectCardRed = cardRed();
+
+  function repartirCartas() {
+    let resultSuit = aleatorioSuit();
+    let suitCard = document.querySelectorAll(".suit");
+    suitCard.forEach(item => {
+      item.innerHTML = resultSuit;
+    });
+    let resultNumber = aleatorioNumber();
+
+    let numberCard = document.querySelector(".number");
+    numberCard.innerHTML = resultNumber;
+
+    let selectCardRed = cardRed();
+  }
+
+  let repartirButton = document.querySelector("#boton");
+  repartirButton.textContent = "Repartir";
+
+  repartirButton.addEventListener("click", repartirCartas);
+
   console.log(aleatorioSuit());
   console.log(aleatorioNumber());
   console.log("Hello Rigo from the console!");
