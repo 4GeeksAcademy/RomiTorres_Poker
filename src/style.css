@@ -28,6 +28,7 @@ body {
   position: absolute;
   bottom: 2px;
   right: 20px;
+  transform: rotate(-180deg);
 }
 
 .number {
